@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <!-- Fragmento de Hero Banner -->
+    <div th:fragment="hero(titulo, subtitulo, botonTexto, botonUrl)" class="hero-banner">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 th:text="${titulo}">Título</h1>
+            <p th:text="${subtitulo}">Subtítulo</p>
+            <a th:href="${botonUrl}" th:text="${botonTexto}" class="btn btn-primario">Botón</a>
+        </div>
+    </div>
+</body>
+</html>

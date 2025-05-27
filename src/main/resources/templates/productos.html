@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/base}">
+<head>
+    <title>Productos</title>
+</head>
+<body>
+    <main layout:fragment="content">
+        <!-- Encabezado de la página -->
+        <div class="page-header">
+            <div class="container">
+                <h1>Nuestros Productos</h1>
+                <p>Descubre nuestra colección de artesanías en madera</p>
+            </div>
+        </div>
+        
+        <!-- Sección de Productos -->
+        <section class="productos">
+            <div class="container">
+                <div th:replace="fragments/section-header :: section-title('Tallados y Esculturas')"></div>
+                <div class="cards-container">
+                    <!-- Tarjeta 1 -->
+                    <div th:replace="fragments/cards :: card('#e6c68e', 'Tallados Decorativos', 'Piezas únicas talladas a mano.', 'Tallados')"></div>
+                    
+                    <!-- Tarjeta 2 -->
+                    <div th:replace="fragments/cards :: card('#8b5a2b', 'Muebles Artesanales', 'Mobiliario de alta calidad.', 'Muebles')"></div>
+                    
+                    <!-- Tarjeta 3 -->
+                    <div th:replace="fragments/cards :: card('#4a2b0f', 'Esculturas', 'Arte en madera que captura la belleza.', 'Esculturas')"></div>
+                </div>
+                
+                <div th:replace="fragments/section-header :: section-title('Productos Personalizados')"></div>
+                <div class="cards-container">
+                    <!-- Usando el fragmento de tarjeta individual -->
+                    <div th:replace="fragments/cards :: card('#6b4226', 'Tallados Personalizados', 'Diseños únicos según tus especificaciones.', 'Personalizado')"></div>
+                    
+                    <div th:replace="fragments/cards :: card('#a67c52', 'Regalos Corporativos', 'Detalles especiales para empresas y eventos.', 'Corporativo')"></div>
+                    
+                    <div th:replace="fragments/cards :: card('#d4a76a', 'Restauraciones', 'Recuperamos el esplendor de tus piezas antiguas.', 'Restauración')"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

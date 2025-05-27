@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <!-- Fragmento de tarjeta individual -->
+    <div th:fragment="card(color, titulo, texto, placeholder)" class="card">
+        <div class="card-image" th:style="'background-color: ' + ${color} + ';'">
+            <div class="image-placeholder" th:style="${color == '#e6c68e' ? '' : 'color: #fff;'}" th:text="${placeholder}"></div>
+        </div>
+        <div class="card-content">
+            <h3 th:text="${titulo}"></h3>
+            <p th:text="${texto}"></p>
+        </div>
+    </div>
+    
+     
+</body>
+</html>

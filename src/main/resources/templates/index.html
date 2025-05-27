@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/base}">
+<head>
+    <title>Inicio</title>
+</head>
+<body>
+    <main layout:fragment="content">
+        <!-- Hero Banner -->
+        <div th:replace="fragments/hero :: hero('El Guía del Tallado', 'Artesanía en madera con pasión y tradición', 'Ver productos', '/productos')"></div>
+        
+        <!-- Productos Destacados -->
+        <section class="destacados">
+            <div class="container">
+                <div th:replace="fragments/section-header :: section-title('Nuestros Productos')"></div>
+                <div class="cards-container">
+                    <!-- Tarjeta 1 -->
+                    <div th:replace="fragments/cards :: card('#e6c68e', 'Tallados Decorativos', 'Piezas únicas talladas a mano.', 'Tallados')"></div>
+                    
+                    <!-- Tarjeta 2 -->
+                    <div th:replace="fragments/cards :: card('#8b5a2b', 'Muebles Artesanales', 'Mobiliario de alta calidad.', 'Muebles')"></div>
+                    
+                    <!-- Tarjeta 3 -->
+                    <div th:replace="fragments/cards :: card('#4a2b0f', 'Esculturas', 'Arte en madera que captura la belleza.', 'Esculturas')"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

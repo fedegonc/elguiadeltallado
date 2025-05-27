@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE">El Guía del Tallado</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <th:block layout:fragment="css"></th:block>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <div th:replace="fragments/navbar :: navbar"></div>
+    
+    <!-- Contenido principal -->
+    <main layout:fragment="content">
+        <!-- El contenido de la página se insertará aquí -->
+    </main>
+    
+    <!-- Pie de página -->
+    <div th:replace="fragments/footer :: footer"></div>
+    
+    <!-- Scripts -->
+    <th:block layout:fragment="scripts"></th:block>
+</body>
+</html>

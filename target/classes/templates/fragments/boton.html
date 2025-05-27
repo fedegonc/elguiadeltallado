@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <!-- Fragmento de botón personalizable -->
+    <a th:fragment="boton(texto, url, clase)" th:href="${url}" th:class="${clase}">
+        <span th:text="${texto}"></span>
+    </a>
+    
+    <!-- Fragmento de botón primario predefinido -->
+    <a th:fragment="boton-primario(texto, url)" th:href="${url}" class="btn btn-primario">
+        <span th:text="${texto}"></span>
+    </a>
+    
+    <!-- Fragmento de botón secundario predefinido -->
+    <a th:fragment="boton-secundario(texto, url)" th:href="${url}" class="btn btn-secundario">
+        <span th:text="${texto}"></span>
+    </a>
+</body>
+</html>
